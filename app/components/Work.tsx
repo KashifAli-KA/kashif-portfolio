@@ -1,0 +1,105 @@
+import Image from "next/image";
+
+const LIVE_URL = "https://garam-chai-house.vercel.app";
+const REPO_URL = "https://github.com/KashifAli-KA/garam-chai-house";
+
+const features = [
+  "Photo cards for the popular dishes, each with a price and an “Order this” button",
+  "An order builder: pick items and quantities, choose dine in or take away, pick a day and time",
+  "The finished order goes to the café as a ready-made WhatsApp message",
+  "Warnings when the visitor picks a Friday or a time outside opening hours",
+  "Works on phones and large screens",
+];
+
+export default function Work() {
+  return (
+    <section
+      id="work"
+      className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8"
+    >
+      <h2 className="mb-8 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+        Selected work
+      </h2>
+
+      <article className="grid gap-8 rounded-3xl border border-line bg-surface p-5 md:grid-cols-[1.25fr_1fr] md:gap-10 md:p-8">
+        <a
+          href={LIVE_URL}
+          aria-label="Open the live Garam Chai House website"
+          className="block self-start overflow-hidden rounded-2xl border border-line shadow-lg"
+        >
+          <div className="flex items-center gap-1.5 bg-line px-3.5 py-2.5 text-xs text-muted">
+            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+            <span className="ml-2 rounded-md bg-surface px-2.5 py-0.5">
+              {LIVE_URL.replace("https://", "")}
+            </span>
+          </div>
+          <Image
+            src="/images/garam-chai-desktop.png"
+            alt="Home page of the Garam Chai House website"
+            width={1887}
+            height={813}
+            className="h-auto w-full"
+          />
+        </a>
+
+        <div>
+          <p className="mb-3 inline-block rounded-full bg-accent/10 px-3 py-1 font-display text-sm font-medium text-accent">
+            Demo project
+          </p>
+          <h3 className="mb-2 font-display text-3xl font-extrabold tracking-tight">
+            Garam Chai House
+          </h3>
+          <p className="mb-5 font-display text-sm text-muted">
+            Next.js, TypeScript, Tailwind CSS, deployed on Vercel
+          </p>
+
+          <p className="mb-5">
+            A one-page site for a made-up chai and breakfast café in Rahim Yar
+            Khan. I built it around one problem: a site that attracts customers
+            and makes ordering easy at the same time.
+          </p>
+
+          <ul className="mb-6 space-y-2.5 text-[17px] leading-snug">
+            {features.map((feature) => (
+              <li key={feature} className="flex gap-3">
+                <span
+                  aria-hidden
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                />
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <p className="mb-7 text-[17px] text-muted">
+            The menu, prices and hours live in one content file, apart from the
+            layout, so changing them never means touching the page code.
+          </p>
+
+          {/* TODO: add a short "What I learned" paragraph here, in your own words */}
+
+          <div className="flex flex-wrap gap-3 font-display font-bold">
+            <a
+              href={LIVE_URL}
+              className="rounded-xl bg-accent px-5 py-3 text-on-accent transition-transform hover:-translate-y-0.5"
+            >
+              Open live site
+            </a>
+            <a
+              href={REPO_URL}
+              className="rounded-xl border-2 border-ink px-5 py-3 transition-transform hover:-translate-y-0.5"
+            >
+              View source code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div className="mt-5 rounded-2xl border-2 border-dashed border-line px-6 py-5 text-muted">
+        Next project: a dashboard built on a public API. In progress.
+      </div>
+    </section>
+  );
+}
