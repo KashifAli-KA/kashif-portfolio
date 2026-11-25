@@ -1,8 +1,5 @@
 import Image from "next/image";
 
-// TODO: replace with your real live address before launch
-const LIVE_URL = "https://garam-chai-house.vercel.app";
-
 const stack = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"];
 
 export default function Hero() {
@@ -26,7 +23,7 @@ export default function Hero() {
             Open to full-time roles and freelance projects
           </div>
 
-          <h1 className="mb-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+          <h1 className="mb-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
             Front-end developer building fast, responsive websites with React
             and Next.js.
           </h1>
@@ -59,30 +56,26 @@ export default function Hero() {
               </li>
             ))}
           </ul>
+
+          <a
+            href="#work"
+            className="mt-6 inline-flex items-center gap-2 font-display text-sm text-[#c9cfe6] transition-colors hover:text-white"
+          >
+            Latest project: Garam Chai House <span aria-hidden>→</span>
+          </a>
         </div>
 
-        <a
-          href={LIVE_URL}
-          className="block overflow-hidden rounded-2xl bg-white shadow-2xl md:rotate-1"
-          aria-label="Open the live Garam Chai House website"
-        >
-          <div className="flex items-center gap-1.5 bg-[#edeff4] px-3.5 py-2.5 text-xs text-[#5a6272]">
-            <i className="h-2.5 w-2.5 rounded-full bg-[#c5cad6]" />
-            <i className="h-2.5 w-2.5 rounded-full bg-[#c5cad6]" />
-            <i className="h-2.5 w-2.5 rounded-full bg-[#c5cad6]" />
-            <span className="ml-2 rounded-md bg-white px-2.5 py-0.5">
-              {LIVE_URL.replace("https://", "")}
-            </span>
-          </div>
+        <div className="relative mx-auto w-full max-w-[320px] md:ml-auto md:mr-4">
+          <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[20px] bg-[#3340ff]" />
           <Image
-            src="/images/garam-chai-desktop.png"
-            alt="Home page of the Garam Chai House website"
-            width={1887}
-            height={813}
+            src="/images/kashif.jpg"
+            alt="Portrait of Kashif Ali"
+            width={450}
+            height={600}
             priority
-            className="h-auto w-full"
+            className="relative h-auto w-full rounded-[20px] border-2 border-white/70 object-cover"
           />
-        </a>
+        </div>
       </div>
     </header>
   );
