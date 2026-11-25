@@ -2,7 +2,7 @@ const EMAIL = "kashifbhatti7536@gmail.com";
 
 // Add your CV file to the public folder, then put its path here,
 // for example "/kashif-ali-cv.pdf". The button stays hidden until then.
-const CV_URL: string | null = null;
+const CV_URL: string | null = "/kashif-ali-cv.pdf";
 
 const links = [
   { label: "WhatsApp", href: "https://wa.me/923017536107" },
