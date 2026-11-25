@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Newsreader } from "next/font/google";
+import { Plus_Jakarta_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["500", "700", "800"],
-  variable: "--font-bricolage",
+  weight: ["500", "600", "700"],
+  variable: "--font-heading",
 });
 
 const body = Newsreader({

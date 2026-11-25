@@ -23,7 +23,7 @@ export default function Hero() {
             Open to full-time roles and freelance projects
           </div>
 
-          <h1 className="mb-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+          <h1 className="mb-5 font-display text-4xl font-bold leading-[1.15] tracking-normal md:text-5xl">
             Front-end developer building fast, responsive websites with React
             and Next.js.
           </h1>

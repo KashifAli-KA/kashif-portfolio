@@ -17,7 +17,7 @@ export default function Work() {
       id="work"
       className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8"
     >
-      <h2 className="mb-8 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+      <h2 className="mb-8 font-display text-4xl font-bold tracking-normal md:text-5xl">
         Selected work
       </h2>
 
@@ -48,7 +48,7 @@ export default function Work() {
           <p className="mb-3 inline-block rounded-full bg-accent/10 px-3 py-1 font-display text-sm font-medium text-accent">
             Demo project
           </p>
-          <h3 className="mb-2 font-display text-3xl font-extrabold tracking-tight">
+          <h3 className="mb-2 font-display text-3xl font-bold tracking-normal">
             Garam Chai House
           </h3>
           <p className="mb-5 font-display text-sm text-muted">

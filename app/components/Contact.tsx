@@ -26,7 +26,7 @@ export default function Contact() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_15%_0%,rgba(80,96,255,0.45),transparent_60%)]" />
 
       <div className="relative px-5 py-14 md:px-8 md:py-20">
-        <h2 className="mb-4 max-w-[22ch] font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+        <h2 className="mb-4 max-w-[22ch] font-display text-4xl font-bold leading-[1.15] tracking-normal md:text-5xl">
           Looking for a front-end developer?
         </h2>
         <p className="mb-8 max-w-[44ch] text-xl leading-relaxed text-[#c9cfe6]">
