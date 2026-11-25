@@ -36,7 +36,7 @@ export default function Work() {
             </span>
           </div>
           <Image
-            src="/images/garam-chai-desktop.png"
+            src="/images/garam-chai-desktop.webp"
             alt="Home page of the Garam Chai House website"
             width={1887}
             height={813}
@@ -73,10 +73,15 @@ export default function Work() {
             ))}
           </ul>
 
-          <p className="mb-7 text-[17px] text-muted">
-            The menu, prices and hours live in one content file, apart from the
-            layout, so changing them never means touching the page code.
-          </p>
+          <p className="mb-7 text-[17px]">
+  <span className="font-display font-bold">What I learned: </span>
+  A site like this has two users. Customers want to order in as few steps as
+  possible, so the order builder ends in a ready-made WhatsApp message. The
+  owner needs orders he can actually serve, so the form warns about Fridays
+  and times outside 6 am to 2 pm. Building for both taught me to start from
+  the customer&rsquo;s goal, then check every feature against what the owner
+  can handle. Next, I am improving the mobile loading speed.
+</p>
 
           {/* TODO: add a short "What I learned" paragraph here, in your own words */}
 
