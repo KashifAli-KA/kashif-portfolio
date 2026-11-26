@@ -20,10 +20,10 @@ export default function Hero() {
         <div>
           <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-white/5 px-3.5 py-2 font-display text-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-[#3ddc84]" />
-            Open to full-time roles and freelance projects
+            Open to full-time and freelance work
           </div>
 
-          <h1 className="mb-5 font-display text-4xl font-bold leading-[1.15] tracking-normal md:text-5xl">
+          <h1 className="mb-5 font-display text-3xl font-bold leading-[1.15] tracking-normal sm:text-4xl md:text-5xl">
             Front-end developer building fast, responsive websites with React
             and Next.js.
           </h1>

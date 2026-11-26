@@ -38,8 +38,8 @@ export default function Work() {
         <Image
   src="/images/garam-chai-mobile.webp"
   alt="Home page of the Garam Chai House website on a phone"
-  width={720}
-  height={1100}
+  width={716}
+  height={1370}
   className="h-auto w-full md:hidden"
 />
 <Image
