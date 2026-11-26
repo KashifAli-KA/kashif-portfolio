@@ -35,21 +35,22 @@ export default function Work() {
               {LIVE_URL.replace("https://", "")}
             </span>
           </div>
-        <Image
-        sizes="(min-width: 1152px) 600px, 55vw"
-  src="/images/garam-chai-mobile.webp"
-  alt="Home page of the Garam Chai House website on a phone"
-  width={716}
-  height={1370}
-  className="h-auto w-full md:hidden"
-/>
-<Image
-  src="/images/garam-chai-desktop.webp"
-  alt="Home page of the Garam Chai House website on a computer"
-  width={1890}
-  height={816}
-  className="hidden h-auto w-full md:block"
-/>
+          <Image
+            src="/images/garam-chai-mobile.webp"
+            alt="Home page of the Garam Chai House website on a phone"
+            width={716}
+            height={1370}
+            sizes="100vw"
+            className="h-auto w-full md:hidden"
+          />
+          <Image
+            src="/images/garam-chai-desktop.webp"
+            alt="Home page of the Garam Chai House website on a computer"
+            width={1890}
+            height={816}
+            sizes="(min-width: 1152px) 600px, 55vw"
+            className="hidden h-auto w-full md:block"
+          />
         </a>
 
         <div>
@@ -82,14 +83,14 @@ export default function Work() {
           </ul>
 
           <p className="mb-7 text-[17px]">
-  <span className="font-display font-bold">What I learned: </span>
-  A site like this has two users. Customers want to order in as few steps as
-  possible, so the order builder ends in a ready-made WhatsApp message. The
-  owner needs orders he can actually serve, so the form warns about Fridays
-  and times outside 6 am to 2 pm. Building for both taught me to start from
-  the customer&rsquo;s goal, then check every feature against what the owner
-  can handle. Next, I am improving the mobile loading speed.
-</p>
+            <span className="font-display font-bold">What I learned: </span>
+            A site like this has two users. Customers want to order in as few steps as
+            possible, so the order builder ends in a ready-made WhatsApp message. The
+            owner needs orders he can actually serve, so the form warns about Fridays
+            and times outside 6 am to 2 pm. Building for both taught me to start from
+            the customer&rsquo;s goal, then check every feature against what the owner
+            can handle. Next, I am improving the mobile loading speed.
+          </p>
 
           {/* TODO: add a short "What I learned" paragraph here, in your own words */}
 
