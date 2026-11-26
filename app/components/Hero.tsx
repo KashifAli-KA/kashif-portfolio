@@ -68,6 +68,7 @@ export default function Hero() {
         <div className="relative order-first w-full max-w-[170px] md:order-none md:ml-auto md:mr-4 md:max-w-[320px]">
           <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[20px] bg-[#3340ff]" />
           <Image
+            sizes="(min-width: 768px) 320px, 170px"
             src="/images/kashif.jpg"
             alt="Portrait of Kashif Ali"
             width={450}

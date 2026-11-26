@@ -36,6 +36,7 @@ export default function Work() {
             </span>
           </div>
         <Image
+        sizes="(min-width: 1152px) 600px, 55vw"
   src="/images/garam-chai-mobile.webp"
   alt="Home page of the Garam Chai House website on a phone"
   width={716}
