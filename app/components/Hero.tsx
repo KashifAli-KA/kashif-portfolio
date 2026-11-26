@@ -65,7 +65,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[320px] md:ml-auto md:mr-4">
+        <div className="relative order-first w-full max-w-[170px] md:order-none md:ml-auto md:mr-4 md:max-w-[320px]">
           <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[20px] bg-[#3340ff]" />
           <Image
             src="/images/kashif.jpg"

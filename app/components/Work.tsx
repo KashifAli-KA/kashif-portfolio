@@ -35,13 +35,20 @@ export default function Work() {
               {LIVE_URL.replace("https://", "")}
             </span>
           </div>
-          <Image
-            src="/images/garam-chai-desktop.webp"
-            alt="Home page of the Garam Chai House website"
-            width={1887}
-            height={813}
-            className="h-auto w-full"
-          />
+        <Image
+  src="/images/garam-chai-mobile.webp"
+  alt="Home page of the Garam Chai House website on a phone"
+  width={720}
+  height={1100}
+  className="h-auto w-full md:hidden"
+/>
+<Image
+  src="/images/garam-chai-desktop.webp"
+  alt="Home page of the Garam Chai House website on a computer"
+  width={1890}
+  height={816}
+  className="hidden h-auto w-full md:block"
+/>
         </a>
 
         <div>
