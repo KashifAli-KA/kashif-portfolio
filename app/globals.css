@@ -41,3 +41,95 @@ body {
   font-size: 19px;
   line-height: 1.65;
 }
+/* ---------- Motion (CSS only) ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes slide {
+  from { transform: translateY(10px); }
+  to { transform: none; }
+}
+
+@keyframes grow {
+  to { transform: scaleX(1); }
+}
+
+/* Hero load-in. "rise" fades in. "slide" only moves, so the headline
+   and photo stay visible from the first frame. */
+.rise {
+  animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  animation-delay: var(--d, 0ms);
+}
+.slide {
+  animation: slide 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+}
+.d1 { --d: 60ms; }
+.d3 { --d: 160ms; }
+.d4 { --d: 240ms; }
+.d5 { --d: 320ms; }
+.d6 { --d: 400ms; }
+
+/* Scroll reveal. Only used when the browser supports scroll timelines,
+   so content is never hidden in older browsers. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: rise linear backwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+/* Reading progress bar at the top of the page */
+.progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 50;
+}
+@supports (animation-timeline: scroll()) {
+  .progress {
+    animation: grow linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+/* Faint grid behind the hero */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(#000, transparent 85%);
+}
+
+/* Link underline that slides in on hover */
+.ulink {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+  transition: background-size 0.25s ease;
+}
+.ulink:hover {
+  background-size: 100% 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .slide,
+  .reveal {
+    animation: none;
+  }
+  .progress {
+    display: none;
+  }
+}

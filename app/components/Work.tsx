@@ -17,11 +17,11 @@ export default function Work() {
       id="work"
       className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8"
     >
-      <h2 className="mb-8 font-display text-4xl font-bold tracking-normal md:text-5xl">
+      <h2 className="reveal mb-8font-display text-4xl font-bold tracking-normal md:text-5xl">
         Selected work
       </h2>
 
-      <article className="grid gap-8 rounded-3xl border border-line bg-surface p-5 md:grid-cols-[1.25fr_1fr] md:gap-10 md:p-8">
+      <article className="reveal grid gap-8 rounded-3xl border border-line bg-surface p-5 transition duration-300 hover:-translate-y-1 hover:shadow-xl md:grid-cols-[1.25fr_1fr] md:gap-10 md:p-8">
         <a
           href={LIVE_URL}
           aria-label="Open the live Garam Chai House website"
@@ -111,7 +111,7 @@ export default function Work() {
         </div>
       </article>
 
-      <div className="mt-5 rounded-2xl border-2 border-dashed border-line px-6 py-5 text-muted">
+      <div className="reveal mt-5 rounded-2xl border-2 border-dashed border-line px-6 py-5 text-muted">
         Next project: a dashboard built on a public API. In progress.
       </div>
     </section>

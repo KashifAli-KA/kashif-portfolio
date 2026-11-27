@@ -28,7 +28,7 @@ export default function About() {
     >
       <div className="grid gap-12 md:grid-cols-[1.2fr_1fr] md:gap-16">
         <div>
-          <h2 className="mb-6 font-display text-4xl font-bold tracking-normal md:text-5xl">
+          <h2 className="reveal mb-6 font-display text-4xl font-bold tracking-normal md:text-5xl">
             About me
           </h2>
           <p className="mb-5">
@@ -58,7 +58,7 @@ export default function About() {
           </p>
         </div>
 
-        <dl className="self-start rounded-3xl border border-line bg-surface p-6 md:p-8">
+        <dl className="reveal self-start  rounded-3xl border border-line bg-surface p-6 md:p-8">
           {facts.map((fact, index) => (
             <div
               key={fact.label}
