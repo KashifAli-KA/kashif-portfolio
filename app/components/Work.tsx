@@ -26,7 +26,7 @@ export default function Work() {
         <div className="self-start">
           <a
             href={LIVE_URL}
-            aria-label="Open the live Garam Chai House website"
+            aria-label="garam-chai-house.vercel.app, open the live Garam Chai House website"
             className="block overflow-hidden rounded-2xl border border-line shadow-lg"
           >
             <div className="flex items-center gap-1.5 bg-line px-3.5 py-2.5 text-xs text-muted">
@@ -134,7 +134,7 @@ export default function Work() {
       </article>
 
       <div className="reveal mt-5 rounded-2xl border-2 border-dashed border-line px-6 py-5 text-muted">
-        Next project: a dashboard built on a public API. In progress.
+      
       </div>
     </section>
   );
