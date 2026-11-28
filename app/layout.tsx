@@ -14,10 +14,21 @@ const body = Newsreader({
   variable: "--font-newsreader",
 });
 
+// Vercel fills this in with your live address, so it keeps working after a rename.
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
+const title = "Kashif Ali | Front-End Developer";
+const description =
+  "Front-end developer building fast, responsive websites with React and Next.js.";
+
 export const metadata: Metadata = {
-  title: "Kashif Ali | Front-End Developer",
-  description:
-    "Front-end developer building fast, responsive websites with React and Next.js.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: { title, description, type: "website", siteName: "Kashif Ali" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function RootLayout({
@@ -26,8 +37,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${display.variable} ${body.variable}`}
+    >
+      <body>
+        <div className="progress" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   );
 }

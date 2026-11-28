@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const LIVE_URL = "https://garam-chai-house.vercel.app";
 const REPO_URL = "https://github.com/KashifAli-KA/garam-chai-house";
@@ -15,43 +16,59 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8"
+      className="mx-auto max-w-6xl scroll-mt-16 px-5 py-20 md:px-8"
     >
-      <h2 className="reveal mb-8font-display text-4xl font-bold tracking-normal md:text-5xl">
+      <h2 className="reveal mb-8 font-display text-4xl font-bold tracking-normal md:text-5xl">
         Selected work
       </h2>
 
       <article className="reveal grid gap-8 rounded-3xl border border-line bg-surface p-5 transition duration-300 hover:-translate-y-1 hover:shadow-xl md:grid-cols-[1.25fr_1fr] md:gap-10 md:p-8">
-        <a
-          href={LIVE_URL}
-          aria-label="Open the live Garam Chai House website"
-          className="block self-start overflow-hidden rounded-2xl border border-line shadow-lg"
-        >
-          <div className="flex items-center gap-1.5 bg-line px-3.5 py-2.5 text-xs text-muted">
-            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
-            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
-            <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
-            <span className="ml-2 rounded-md bg-surface px-2.5 py-0.5">
-              {LIVE_URL.replace("https://", "")}
-            </span>
-          </div>
-          <Image
-            src="/images/garam-chai-mobile.webp"
-            alt="Home page of the Garam Chai House website on a phone"
-            width={716}
-            height={1370}
-            sizes="100vw"
-            className="h-auto w-full md:hidden"
-          />
-          <Image
-            src="/images/garam-chai-desktop.webp"
-            alt="Home page of the Garam Chai House website on a computer"
-            width={1890}
-            height={816}
-            sizes="(min-width: 1152px) 600px, 55vw"
-            className="hidden h-auto w-full md:block"
-          />
-        </a>
+        <div className="self-start">
+          <a
+            href={LIVE_URL}
+            aria-label="Open the live Garam Chai House website"
+            className="block overflow-hidden rounded-2xl border border-line shadow-lg"
+          >
+            <div className="flex items-center gap-1.5 bg-line px-3.5 py-2.5 text-xs text-muted">
+              <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+              <span className="ml-2 rounded-md bg-surface px-2.5 py-0.5">
+                {LIVE_URL.replace("https://", "")}
+              </span>
+            </div>
+            <Image
+              src="/images/garam-chai-mobile.webp"
+              alt="Home page of the Garam Chai House website on a phone"
+              width={716}
+              height={1370}
+              sizes="100vw"
+              className="h-auto w-full md:hidden"
+            />
+            <Image
+              src="/images/garam-chai-desktop.webp"
+              alt="Home page of the Garam Chai House website on a computer"
+              width={1890}
+              height={816}
+              sizes="(min-width: 1152px) 600px, 55vw"
+              className="hidden h-auto w-full md:block"
+            />
+          </a>
+
+          <figure className="mt-6 hidden max-w-[220px] md:block">
+            <Image
+              src="/images/garam-chai-mobile.webp"
+              alt="The same page on a phone"
+              width={716}
+              height={1370}
+              sizes="220px"
+              className="h-auto w-full rounded-2xl border border-line shadow-lg"
+            />
+            <figcaption className="mt-2 font-display text-sm text-muted">
+              The same page on a phone
+            </figcaption>
+          </figure>
+        </div>
 
         <div>
           <p className="mb-3 inline-block rounded-full bg-accent/10 px-3 py-1 font-display text-sm font-medium text-accent">
@@ -84,20 +101,25 @@ export default function Work() {
 
           <p className="mb-7 text-[17px]">
             <span className="font-display font-bold">What I learned: </span>
-            A site like this has two users. Customers want to order in as few steps as
-            possible, so the order builder ends in a ready-made WhatsApp message. The
-            owner needs orders he can actually serve, so the form warns about Fridays
-            and times outside 6 am to 2 pm. Building for both taught me to start from
-            the customer&rsquo;s goal, then check every feature against what the owner
-            can handle. Next, I am improving the mobile loading speed.
+            A site like this has two users. Customers want to order in as few
+            steps as possible, so the order builder ends in a ready-made
+            WhatsApp message. The owner needs orders he can actually serve, so
+            the form warns about Fridays and times outside 6 am to 2 pm.
+            Building for both taught me to start from the customer&rsquo;s
+            goal, then check every feature against what the owner can handle.
+            Next, I am improving the mobile loading speed.
           </p>
 
-          {/* TODO: add a short "What I learned" paragraph here, in your own words */}
-
           <div className="flex flex-wrap gap-3 font-display font-bold">
+            <Link
+              href="/work/garam-chai-house"
+              className="rounded-xl bg-accent px-5 py-3 text-on-accent transition-transform hover:-translate-y-0.5"
+            >
+              Read the case study
+            </Link>
             <a
               href={LIVE_URL}
-              className="rounded-xl bg-accent px-5 py-3 text-on-accent transition-transform hover:-translate-y-0.5"
+              className="rounded-xl border-2 border-ink px-5 py-3 transition-transform hover:-translate-y-0.5"
             >
               Open live site
             </a>

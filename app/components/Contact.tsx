@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="relative mx-2 mb-2 mt-4 scroll-mt-6 overflow-hidden rounded-[22px] bg-[#0b0f24] text-[#eef1f6] md:mx-auto md:mb-3 md:max-w-6xl md:rounded-[28px]"
+      className="relative mx-2 mb-2 mt-4 scroll-mt-16 overflow-hidden rounded-[22px] bg-[#0b0f24] text-[#eef1f6] md:mx-auto md:mb-3 md:max-w-6xl md:rounded-[28px]"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_15%_0%,rgba(80,96,255,0.45),transparent_60%)]" />
 

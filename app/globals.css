@@ -133,3 +133,29 @@ html {
     display: none;
   }
 }
+/* Sticky menu: slides in after the hero has scrolled away (no JavaScript) */
+.sticky-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  visibility: hidden;
+}
+
+@keyframes nav-in {
+  from { opacity: 0; transform: translateY(-100%); visibility: hidden; }
+  to { opacity: 1; transform: none; visibility: visible; }
+}
+
+@supports (animation-timeline: scroll()) {
+  .sticky-nav {
+    animation: nav-in linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 480px 560px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-nav {
+    animation: none;
+  }
+}

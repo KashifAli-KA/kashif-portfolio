@@ -4,7 +4,7 @@ const stack = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"];
 
 export default function Hero() {
   return (
-    <header className="relative mx-2 mt-2 overflow-hidden rounded-[22px] bg-[#0b0f24] text-[#eef1f6] md:mx-auto md:mt-3 md:max-w-6xl md:rounded-[28px]">
+    <header id="top" className="relative mx-2 mt-2 overflow-hidden rounded-[22px] bg-[#0b0f24] text-[#eef1f6] md:mx-auto md:mt-3 md:max-w-6xl md:rounded-[28px]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_500px_at_85%_10%,rgba(80,96,255,0.55),transparent_60%)]" />
       <div className="hero-grid pointer-events-none absolute inset-0" />
 
